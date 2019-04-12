@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
 	  }
 	});
 
-	String[] list = {"Todo 1", "Todo 2", "todo 3", "todo 4"};
+	String[] list = {"Todo 1", "Todo 2", "todo 3", "todo 4", "todo 5", "todo 6", "todo 7", "todo 8", "todo 9", "todo 10"};
 	createListView(list);
   }
 
   private void createListView(String[] list) {
-	ListAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,list);
-	ListView listView = (ListView) findViewById(R.id.listView);
+	ListAdapter adapter = new TodoViewAdapter(this,list);
+	ListView listView = findViewById(R.id.listView);
 	listView.setAdapter(adapter);
   }
 
