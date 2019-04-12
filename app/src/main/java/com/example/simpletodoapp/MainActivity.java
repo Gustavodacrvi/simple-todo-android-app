@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void createListView(String[] list) {
-	ListAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,list);
-	ListView listView = (ListView) findViewById(R.id.listView);
+	ListAdapter adapter = new TodoViewAdapter(this,list);
+	ListView listView = findViewById(R.id.listView);
 	listView.setAdapter(adapter);
   }
 
