@@ -26,6 +26,6 @@ public class Icon extends AppCompatTextView {
   private void createView() {
 	AssetManager am = context.getApplicationContext().getAssets();
     setGravity(Gravity.CENTER);
-    setTypeface(Typeface.createFromAsset(am, "Font Awesome 5 Free-Solid-900.otf"));
+    setTypeface(Typeface.createFromAsset(am, "fontAwesome.otf"));
   }
 }
