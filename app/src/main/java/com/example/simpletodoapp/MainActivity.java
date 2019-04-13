@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 
 public class MainActivity extends AppCompatActivity {
+  String[] todos = {};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +31,11 @@ public class MainActivity extends AppCompatActivity {
 	  }
 	});
 
-	String[] list = {"Todo 1", "Todo 2", "todo 3", "todo 4", "todo 5", "todo 6", "todo 7", "todo 8", "todo 9", "todo 10"};
-	createListView(list);
+	createListView();
   }
 
-  private void createListView(String[] list) {
-	ListAdapter adapter = new TodoViewAdapter(this,list);
+  private void createListView() {
+	ListAdapter adapter = new TodoViewAdapter(this, this.todos);
 	ListView listView = findViewById(R.id.listView);
 	listView.setAdapter(adapter);
   }
