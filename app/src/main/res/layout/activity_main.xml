@@ -22,11 +22,31 @@
 
     <include layout="@layout/content_main" />
 
-    <com.example.simpletodoapp.Icon
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:textColor="#ffffff"
-        android:textSize="30sp"
-        android:text="@string/plus"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|end">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:id="@+id/fab"
+            android:src="@android:color/transparent"
+            />
+
+        <com.example.simpletodoapp.Icon
+            android:id="@+id/plus_icon"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:elevation="16dp"
+            android:text="@string/plus"
+            />
+
+    </FrameLayout>
 
 </android.support.design.widget.CoordinatorLayout>
