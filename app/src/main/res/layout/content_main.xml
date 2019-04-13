@@ -8,15 +8,38 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/backgroundColor">
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
 
-            android:id="@+id/listView"/>
-    </LinearLayout>
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/cardColor"
+            android:layout_gravity="bottom"
+            >
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffffff"
+                android:inputType="textPersonName"
+                android:hint="@string/todo_title"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
 </android.support.constraint.ConstraintLayout>
